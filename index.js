@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/', misrutas);
 
+app.use(express.static(process.cwd() + '/public/'));
+
 app.listen(port, () => {
     console.log(`Hola, servidor en ejecución en ${process.cwd()}:${port}`);
 });

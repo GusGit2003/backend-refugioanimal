@@ -1,8 +1,8 @@
 const express = require("express"); //Importar
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send({ message: "Hola mundo, soy Gustavo Adolfo Avendaño Guevara" });
+router.get('/', function(req, res) {
+  res.sendFile(process.cwd() + '/public/index.html');
 });
 
 router.get("/datos", (req, res) => {
